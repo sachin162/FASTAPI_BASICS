@@ -44,5 +44,6 @@ async def update_item(item_id: int, updated_item: Item):
 @app.get("/items")
 async def read_all_items():
     print("Reading all items")
+    print(database)
     return database
 
