@@ -35,6 +35,7 @@ async def read_item(item_id: int):
 # PUT endpoint: Update an existing item
 @app.put("/items/{item_id}")
 async def update_item(item_id: int, updated_item: Item):
+    print("Added Print Statenebt ")
     if item_id not in database:
         raise HTTPException(status_code=404, detail="Item not found")
     database[item_id] = updated_item
