@@ -18,6 +18,7 @@ class Item(BaseModel):
 # POST endpoint: Add a new item
 @app.post("/items/{item_id}")
 async def create_item(item_id: int, item: Item):
+    print("This is a Post Call ")
     if item_id in database:
         raise HTTPException(status_code=400, detail="Item already exists")
     database[item_id] = item
