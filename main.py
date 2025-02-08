@@ -48,3 +48,6 @@ async def read_all_items():
     print(database)
     return database
 
+
+async def get_user_count():
+    return 100
